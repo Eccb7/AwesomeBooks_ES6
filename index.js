@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentDateElement = document.getElementById('currentDate');
   const bookContainer = document.getElementById('bookContainer');
   const addBookForm = document.getElementById('addBookForm');
-  
+
   const bookManager = new BookManager(bookContainer);
 
   // Initialize navigation functionality
