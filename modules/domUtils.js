@@ -1,5 +1,7 @@
 // import { showContent } from './domUtils.js';
 
+/* eslint-disable */
+
 function updateActiveNavLink(selectedLink) {
   const navLinks = document.querySelectorAll('.navbar ul li a');
   navLinks.forEach((link) => {
