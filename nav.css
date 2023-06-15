@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  background-color: #ddd;
+  color: #333;
+  border-radius: 5px;
+}
