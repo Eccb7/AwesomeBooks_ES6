@@ -1,4 +1,4 @@
-export default function getCurrentDate() {
+const getCurrentDate = () => {
   const options = {
     weekday: 'long',
     year: 'numeric',
@@ -7,4 +7,6 @@ export default function getCurrentDate() {
   };
   const currentDate = new Date().toLocaleDateString(undefined, options);
   return currentDate;
-}
+};
+
+export default getCurrentDate;

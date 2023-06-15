@@ -6,7 +6,7 @@ const showContent = (section) => {
   section.classList.add('active');
 };
 
-export default function initializeNavigation() {
+const initializeNavigation = () => {
   const navLinks = document.querySelectorAll('.navbar ul li a');
   navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
@@ -15,4 +15,6 @@ export default function initializeNavigation() {
       showContent(targetSection);
     });
   });
-}
+};
+
+export default initializeNavigation;
