@@ -1,6 +1,6 @@
-import { getCurrentDate } from './modules/dateUtils.js';
+import getCurrentDate from './modules/dateUtils.js';
 import BookManager from './modules/bookManager.js';
-import { initializeNavigation } from './modules/navigation.js';
+import initializeNavigation from './modules/navigation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const currentDateElement = document.getElementById('currentDate');

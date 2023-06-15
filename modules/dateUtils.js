@@ -1,6 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-
-export function getCurrentDate() {
+export default function getCurrentDate() {
   const options = {
     weekday: 'long',
     year: 'numeric',
