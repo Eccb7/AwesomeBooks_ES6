@@ -2,6 +2,8 @@ export default class BookManager {
   constructor(container) {
     this.container = container;
     this.books = [];
+    this.loadBooksFromLocalStorage();
+    this.renderBooks();
   }
 
   addBook(title, author) {
@@ -10,11 +12,19 @@ export default class BookManager {
       author,
     };
     this.books.push(book);
+    this.saveBooksToLocalStorage();
     this.renderBooks();
+
+    // Clear input fields
+    const titleInput = document.getElementById('titleInput');
+    const authorInput = document.getElementById('authorInput');
+    titleInput.value = '';
+    authorInput.value = '';
   }
 
   removeBook(index) {
     this.books.splice(index, 1);
+    this.saveBooksToLocalStorage();
     this.renderBooks();
   }
 
@@ -60,5 +70,16 @@ export default class BookManager {
       }
       this.container.appendChild(list);
     }
+  }
+
+  loadBooksFromLocalStorage() {
+    const storedBooks = localStorage.getItem('books');
+    if (storedBooks) {
+      this.books = JSON.parse(storedBooks);
+    }
+  }
+
+  saveBooksToLocalStorage() {
+    localStorage.setItem('books', JSON.stringify(this.books));
   }
 }
